@@ -5,7 +5,7 @@ const App = memo(() => {
   return (
     <div>
       <h2>App: {message}</h2>
-      <button onClick={ e =>setMessage("Hello React.")}>修改文本</button>
+      <button onClick={ e =>setMessage("Hello React.....")}>修改文本</button>
     </div>
   );
 });
