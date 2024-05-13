@@ -4,19 +4,37 @@ import { useEffect } from "react";
 
 const App = memo(() => {
   const [count, setCount] = useState(0);
-  // 负责告知React, 在执行完当前组件渲染之后要执行的副作用的代码
-  useEffect(() => {
-    //   // 1.监听事件
-    //   const unubscribe = store.subscribe(() => {});
 
-    //   function foo() {}
-    //   eventBus.on("why", foo);
-    console.log("监听redux中数据变量, 监听eventBus中的why事件.");
+  // 负责告知react， 在执行完成当前组件渲染之后要执行的副作用代码
+  useEffect(() => {
+    // 1. 修改document的title(1行)
+    console.log("修改title")
+
+  });
+
+
+  // 一个函数式组件中，可以存在多个useEffect
+  useEffect(() => {
+    console.log("监听redux中的数据")
+
+    // 2. 对redux中数据变化监听
+
+    // 3. 监听eventBus中的why事件
 
     return () => {
-      console.log("取消监听redux数据变化, 取消监听eventBus中why事件")
+      // 取消redux中数据的监听
     }
-  });
+
+  })
+
+  useEffect(() => {
+    // 3.监听eventBus中的why事件
+    console.log("监听eventBus的why事件")
+
+    return () => {
+      // 取消eventBus中why事件的监听
+    }
+  })
 
   return (
     <div>
