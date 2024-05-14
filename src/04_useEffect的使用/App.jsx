@@ -20,7 +20,7 @@ const App = memo(() => {
 
   return (
     <div>
-      <button onClick={(e) => setCount(count + 1)}>+1({count})</button>
+      <button onClick={(e) => setCount(count + 100)}>+1({count})</button>
     </div>
   );
 });
