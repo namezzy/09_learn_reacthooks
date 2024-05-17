@@ -7,8 +7,9 @@ const App = memo(() => {
 
     const [count, setCount] = useState(0)
     const increment = useCallback(function() {
+        console.log("increment.")
         setCount(count + 1)
-    })
+    }, [])
     return (
         <div>
             <h2>Counter: {count}</h2>
