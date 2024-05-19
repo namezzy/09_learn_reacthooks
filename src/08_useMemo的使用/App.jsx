@@ -5,7 +5,7 @@ const App = memo(() => {
     const [count, setCount ] = useState(0)
   return (
     <div>
-        <h2>计算结果: 烦</h2>
+        <h2>计算结果: {count}</h2>
     </div>
   )
 })
